@@ -24,32 +24,37 @@ Following sample dataset should be loaded for spring-mongodb-example to work
 #### Connecting to MongoDB Atlas
 [Connecting to MongoDB Atlas](https://intercom.help/mongodb-atlas/en/articles/3212463-connecting-to-an-atlas-cluster)
 
+#### MongoDB Connection String Reference
+[MongoDB Connection String](https://docs.mongodb.com/manual/reference/connection-string/)
+
 `springboot-mongodb-example` has required drivers to connect, only appropriate
 configuration is required, refer to [Configuration](#Configuration)
+
+### JDK/Maven setup
 
 Following software is required to build and run the project
 1. JDK (Version 1.8.x)
 2. Maven (Version 3.5.x)
 
-### Installing JDK and Maven
+#### Installing JDK and Maven
 use `sdkman` for installing JDK and Maven
-#### Installing `sdkman`
+##### Installing `sdkman`
 [Installing sdkman](https://sdkman.io/install)
 
-##### Usage `sdkman`
+###### Usage `sdkman`
 [Using sdkman](https://sdkman.io/usage)
 
-#### List available Java and Maven versions
+##### List available Java and Maven versions
 1. `sdk list java`
 2. `sdk list maven`
 
-#### Available `JDK Distributions` and installing JDK
+##### Available `JDK Distributions` and installing JDK
 [JDK distributions supported by sdkman](https://sdkman.io/jdks)
 
-#### Installing `Maven`
+##### Installing `Maven`
 [Installing Maven](https://sdkman.io/sdks#maven)
 
-## Building springboot-mongodb-example
+### Building springboot-mongodb-example
 **Build the project using command**
 
 nvattikonda@nvattikonda-mbp:`cd ~/projects/personal/springboot-mongodb-example &&  mvn clean install`
@@ -71,30 +76,27 @@ mongodb:
         sample_mflix: mongodb+srv://mongorocks:mongorocks@mongorocks.mongodb.net/sample_mflix?authSource=admin&retryWrites=true&w=majority&ssl=true&minPoolSize=5&maxPoolSize=100&maxIdleTimeMS=900000&connectTimeoutMS=5000&socketTimeoutMS=15000&waitQueueMultiple=1&waitQueueTimeoutMS=2000&readpreference=secondaryPreferred&appName=mongorocks
 ```
 
-## Running springboot-mongodb-example
+### Running springboot-mongodb-example
 nvattikonda@nvattikonda-mbp:`cd ~/projects/personal/springboot-mongodb-example &&  mvn spring-boot:run`
 
-### Invoking API
+# Invoking API
 
-# APIs
+## APIs
 
-#### Fetching all users
+### Fetching all users
 ```http://localhost:8080/users```
 
-#### Fetching a user
+### Fetching a user
 ```http://localhost:8080/users/<id>```
 
-#### Fetching all accounts
+### Fetching all accounts
 ```http://localhost:8080/accounts```
 
-#### Fetching a account
+### Fetching a account
 ```http://localhost:8080/accounts/<id>```
 
-## Acknowledgments
+# Acknowledgments
 * Thanks to anyone who's code/framework/references/examples are used
 
-## Useful Information
-
-[markdown intellij plugin](https://github.com/vsch/idea-multimarkdown)
-
+# Useful Information
 [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
