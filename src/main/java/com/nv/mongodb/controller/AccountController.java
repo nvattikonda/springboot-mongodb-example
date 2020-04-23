@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Instant;
 import java.util.List;
 
 @RestController
@@ -24,7 +25,11 @@ public class AccountController {
 
     @RequestMapping(value="", method = RequestMethod.POST)
     public Account addNewAccount(@RequestBody Account account) {
-        LOG.info("Saving account.");
+        LOG.info("Saving account: {}", account);
+        //ignore user id sent by the client
+        account.setId(null);
+        //ignore account_id sent by the client
+        account.setAccount_id(String.valueOf(Instant.now().toEpochMilli()));
         return accountDAL.addNewAccount(account);
     }
 
@@ -36,7 +41,7 @@ public class AccountController {
 
     @RequestMapping(value = "/{accountId}", method = RequestMethod.GET)
     public Account getUser(@PathVariable String accountId) {
-        LOG.info("Retrieving account with ID: {}.", accountId);
+        LOG.info("Retrieving account with ID: {}", accountId);
         return accountDAL.getAccountById(accountId);
     }
 

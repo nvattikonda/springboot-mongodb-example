@@ -29,7 +29,9 @@ public class UserController {
 
     @RequestMapping(value="", method = RequestMethod.POST)
     public User addNewUsers(@RequestBody User user) {
-        LOG.info("Saving user.");
+        LOG.info("Saving user: {}",user);
+        //ignore user id sent by the client
+        user.setId(null);
         return userDAL.addNewUser(user);
     }
 
@@ -41,7 +43,7 @@ public class UserController {
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.GET)
     public User getUser(@PathVariable String userId) {
-        LOG.info("Retrieving user with ID: {}.", userId);
+        LOG.info("Retrieving user with ID: {}", userId);
         return userDAL.getUserById(userId);
     }
 
