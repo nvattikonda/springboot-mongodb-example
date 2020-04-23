@@ -84,16 +84,49 @@ nvattikonda@nvattikonda-mbp:`cd ~/projects/personal/springboot-mongodb-example &
 ## APIs
 
 ### Fetching all users
-```http://localhost:8080/users```
+```curl --location --request GET 'http://localhost:8080/users'```
 
 ### Fetching a user
-```http://localhost:8080/users/<id>```
+```curl --location --request GET 'http://localhost:8080/users/<id>'```
+
+### Creating a user
+```
+curl --location --request POST 'http://localhost:8080/users' \
+--header 'Content-Type: application/json' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+        
+        "name": "mongo rocks",
+        "email": "mongorocks@mongodb.net",
+        "password": "mongorocks"
+    }'
+ ```
+### Deleting a user
+```curl --location --request DELETE 'http://localhost:8080/users/<id>>'```
 
 ### Fetching all accounts
-```http://localhost:8080/accounts```
+```curl --location --request GET 'http://localhost:8080/accounts'```
 
 ### Fetching a account
-```http://localhost:8080/accounts/<id>```
+```curl --location --request GET 'http://localhost:8080/accounts/<id>'```
+
+### Creating an account
+```
+curl --location --request POST 'http://localhost:8080/accounts' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+      
+        "limit": "10000",
+        "products": [
+            "CurrencyService",
+            "InvestmentFund",
+            "InvestmentStock",
+            "Derivatives"
+        ]
+    }'
+```
+### Deleting an account
+```curl --location --request DELETE 'http://localhost:8080/accounts/<id>>'```
 
 # Acknowledgments
 * Thanks to anyone who's code/framework/references/examples are used
