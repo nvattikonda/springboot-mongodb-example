@@ -28,7 +28,7 @@ Following sample dataset should be loaded for spring-mongodb-example to work
 [MongoDB Connection String](https://docs.mongodb.com/manual/reference/connection-string/)
 
 `springboot-mongodb-example` has required drivers to connect, only appropriate
-configuration is required, refer to [Configuration](#Configuration)
+configuration is required, refer to [Configuration](#configuration)
 
 ### JDK/Maven setup
 
