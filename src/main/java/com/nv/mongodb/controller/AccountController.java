@@ -39,4 +39,10 @@ public class AccountController {
         LOG.info("Retrieving account with ID: {}.", accountId);
         return accountDAL.getAccountById(accountId);
     }
+
+    @RequestMapping(value = "/{accountId}", method = RequestMethod.DELETE)
+    public void deleteAccount(@PathVariable String accountId) {
+        LOG.info("Deleting account with ID: {}.", accountId);
+        accountDAL.removeAccountById(accountId);
+    }
 }

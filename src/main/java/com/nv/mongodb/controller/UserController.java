@@ -44,4 +44,10 @@ public class UserController {
         LOG.info("Retrieving user with ID: {}.", userId);
         return userDAL.getUserById(userId);
     }
+
+    @RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable String userId) {
+        LOG.info("Deleting user with ID: {}.", userId);
+        userDAL.removeUserById(userId);
+    }
 }
