@@ -1,13 +1,12 @@
 package com.nv.mongodb.config;
 
-import com.mongodb.MongoClientURI;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
+import org.springframework.data.mongodb.core.SimpleMongoClientDbFactory;
 
 import java.util.Map;
 
@@ -21,12 +20,12 @@ public class MongoConfig {
     @Primary
     @Bean(name = "analyticsMongoTemplate")
     public MongoTemplate analyticsTemplate() throws Exception {
-        return new MongoTemplate(new SimpleMongoDbFactory(new MongoClientURI(mapURL.get("sample_analytics"))));
+        return new MongoTemplate(new SimpleMongoClientDbFactory(mapURL.get("sample_analytics")));
     }
 
     @Bean(name = "mflixMongoTemplate")
     public MongoTemplate mflixTemplate() throws Exception {
         String content = mapURL.get("content");
-        return new MongoTemplate(new SimpleMongoDbFactory(new MongoClientURI(mapURL.get("sample_mflix"))));
+        return new MongoTemplate(new SimpleMongoClientDbFactory(mapURL.get("sample_mflix")));
     }
 }
