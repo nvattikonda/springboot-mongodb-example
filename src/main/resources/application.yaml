@@ -7,24 +7,4 @@ mongodb:
         sample_analytics: mongodb+srv://<userName>:<password>@<host>/sample_analytics?authSource=admin&retryWrites=true&w=majority&ssl=true&ssl=true&minPoolSize=5&maxPoolSize=100&maxIdleTimeMS=900000&connectTimeoutMS=5000&socketTimeoutMS=15000&waitQueueMultiple=1&waitQueueTimeoutMS=2000&readpreference=secondaryPreferred&appName=mongorocks
         sample_mflix: mongodb+srv://<userName>:<password>@<host>/sample_mflix?authSource=admin&retryWrites=true&w=majority&ssl=true&minPoolSize=5&maxPoolSize=100&maxIdleTimeMS=900000&connectTimeoutMS=5000&socketTimeoutMS=15000&waitQueueMultiple=1&waitQueueTimeoutMS=2000&readpreference=secondaryPreferred&appName=mongorocks
 
-# http://mongodb.github.io/mongo-java-driver/4.0/upgrading/
-# https://docs.mongodb.com/manual/reference/connection-string/
-# http://mongodb.github.io/mongo-java-driver/4.0/apidocs/mongodb-driver-core/com/mongodb/ConnectionString.html?is-external=true
-# https://nullbeans.com/spring-boot-and-mongodb-configuration-example/
-# https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/html/common-application-properties.html
-
-# APIs
-# http://localhost:8080/users
-# http://localhost:8080/users/59b99dbecfa9a34dcd7885ca
-# http://localhost:8080/accounts
-# http://localhost:8080/accounts/5ca4bbc7a2dd94ee581623aa
-
-
-
-# http://mongodb.github.io/mongo-java-driver/4.0/upgrading/
-# https://docs.mongodb.com/manual/reference/connection-string/
-# http://mongodb.github.io/mongo-java-driver/4.0/apidocs/mongodb-driver-core/com/mongodb/ConnectionString.html?is-external=true
-# https://nullbeans.com/spring-boot-and-mongodb-configuration-example/
-# https://docs.spring.io/spring-boot/docs/2.0.4.RELEASE/reference/html/common-application-properties.html
-
 
