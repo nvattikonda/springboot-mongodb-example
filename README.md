@@ -8,7 +8,13 @@ springboot-mongodb-example project provides information on following
 2. Exposing collections over Restful endpoints using Spring Boot
 
 # Getting Started
-Get copy of **springboot-mongodb-example** module via `git clone https://github.com/nvattikonda/springboot-mongodb-example.git`
+Get copy of **springboot-mongodb-example** module via
+
+`git clone https://github.com/nvattikonda/springboot-mongodb-example.git`
+
+or
+
+`https://github.com/nvattikonda/springboot-mongodb-example/archive/master.zip`
 ## Prerequisites
 
 ### MongoDB Atlas setup
