@@ -1,10 +1,14 @@
+server:
+    port: 8080
+
 # Disable MongoAutoConfiguration, to ensure Spring Boot will not activate default values which point MongoDB host:port to localhost:27017 when MongoDB driver is detected on the classpath
 spring:
     autoconfigure:
         exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+    application:
+        name: spring-mongodb-example
 mongodb:
     mapURL:
         sample_analytics: mongodb+srv://<userName>:<password>@<host>/sample_analytics?authSource=admin&retryWrites=true&w=majority&ssl=true&ssl=true&minPoolSize=5&maxPoolSize=100&maxIdleTimeMS=900000&connectTimeoutMS=5000&socketTimeoutMS=15000&waitQueueMultiple=1&waitQueueTimeoutMS=2000&readpreference=secondaryPreferred&appName=mongorocks
         sample_mflix: mongodb+srv://<userName>:<password>@<host>/sample_mflix?authSource=admin&retryWrites=true&w=majority&ssl=true&minPoolSize=5&maxPoolSize=100&maxIdleTimeMS=900000&connectTimeoutMS=5000&socketTimeoutMS=15000&waitQueueMultiple=1&waitQueueTimeoutMS=2000&readpreference=secondaryPreferred&appName=mongorocks
-
 
