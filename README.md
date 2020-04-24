@@ -85,6 +85,13 @@ mongodb:
         sample_mflix: mongodb+srv://mongorocks:mongorocks@mongorocks.mongodb.net/sample_mflix?authSource=admin&retryWrites=true&w=majority&ssl=true&minPoolSize=5&maxPoolSize=100&maxIdleTimeMS=900000&connectTimeoutMS=5000&socketTimeoutMS=15000&waitQueueMultiple=1&waitQueueTimeoutMS=2000&readpreference=secondaryPreferred&appName=mongorocks
 ```
 
+Default `port` application will be running is `8080` to change the part update application.yaml
+```
+server:
+    port: 8080
+```
+
+
 ### Running springboot-mongodb-example
 nvattikonda@nvattikonda-mbp:`cd ~/projects/personal/springboot-mongodb-example &&  mvn spring-boot:run`
 
