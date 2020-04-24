@@ -30,6 +30,15 @@ Following sample dataset should be loaded for spring-mongodb-example to work
 `springboot-mongodb-example` has required drivers to connect, only appropriate
 configuration is required, refer to [Configuration](#configuration)
 
+#### MongoDB Atlas DNS SRV records
+MongoDB Atlas creates DNS records, details can be retrieved by following commands
+
+`nslookup -type=srv _mongodb._tcp.<domainName>.`
+
+`dig _mongodb._tcp.<domainName>. SRV`
+
+Refer to [DNS SRV Record](#useful-information) for additional information
+
 ### JDK/Maven setup
 
 Following software is required to build and run the project
@@ -132,4 +141,6 @@ curl --location --request POST 'http://localhost:8080/accounts' \
 * Thanks to anyone who's code/framework/references/examples are used
 
 # Useful Information
+[DNS SRV Record](https://en.wikipedia.org/wiki/SRV_record)
+
 [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
